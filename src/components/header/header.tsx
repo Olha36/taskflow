@@ -184,7 +184,7 @@ const Header = ({ name, tasksAmount }: HeaderProps) => {
         }}
       >
         <Search>
-          <StyledInputBase placeholder="Search…" inputProps={{ 'aria-label': 'search' }} />
+          <StyledInputBase placeholder="Search" inputProps={{ 'aria-label': 'search' }} />
         </Search>
 
         <Box sx={{ flexShrink: 0 }}>
