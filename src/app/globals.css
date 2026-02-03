@@ -1,26 +1,75 @@
-@import "tailwindcss";
-
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@import 'tailwindcss';
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-bg-app: var(--ds-bg-900);
+  --color-bg-card: var(--ds-bg-800);
+  --color-bg-card-muted: var(--ds-bg-750);
+  --color-bg-row: var(--ds-bg-700);
+  --color-bg-hover: var(--ds-bg-600);
+
+  --color-text-primary: var(--ds-text-100);
+  --color-text-secondary: var(--ds-text-300);
+  --color-text-muted: var(--ds-text-600);
+  --color-text-disabled: var(--ds-text-700);
+
+  --color-border-primary: var(--ds-border-700);
+  --color-border-secondary: var(--ds-border-500);
+
+  --color-accent-primary: var(--ds-accent-blue-500);
+  --color-accent-primary-strong: var(--ds-accent-blue-600);
+  --color-accent-primary-stronger: var( --ds-accent-blue-700);
+
+  --color-success: var(--ds-success-500);
+  --color-warning: var(--ds-warning-500);
+  --color-danger: var(--ds-danger-500);
+
+  --color-glow-primary: var(--ds-glow-blue);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+:root {
+  --ds-bg-950: #000000;
+  --ds-bg-900: #121622;
+  --ds-bg-850: #07090d;
+  --ds-bg-800: #0c0f17;
+  --ds-bg-750: #1e2233;
+  --ds-bg-700: #232838;
+  --ds-bg-650: #252a3d;
+  --ds-bg-600: #293245;
+
+  --ds-text-100: #ffffff;
+  --ds-text-200: #f5f7fa;
+  --ds-text-300: #e5e7eb;
+  --ds-text-400: #c5cad3;
+  --ds-text-500: #c5c9d3;
+  --ds-text-600: #94a3b8;
+  --ds-text-700: #596275;
+
+  --ds-border-700: #313b54;
+  --ds-border-600: rgba(255, 255, 255, 0.12);
+  --ds-border-500: rgba(255, 255, 255, 0.08);
+  
+  --ds-accent-blue-700: #1a317e;
+  --ds-accent-blue-600: #1e40af;
+  --ds-accent-blue-500: #3b82f6;
+
+  --ds-success-500: #3bb979;
+  --ds-warning-500: #fdd261;
+  --ds-danger-500: #cc0101;
+
+  --ds-glow-blue: rgba(90, 137, 215, 0.2);
+  --ds-overlay-dark: rgba(0, 0, 0, 0.5);
+}
+
+
+.avatar-bg {
+  background-color: var(--color-accent-primary-stronger);
+}
+
+@layer base {
+  html,
+  body {
+    min-height: 100%;
+    background-color: var(--color-bg-app);
+    color: var(--color-text-primary);
   }
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
 }
