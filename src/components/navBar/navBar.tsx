@@ -1,25 +1,3 @@
-// import { Box, Typography } from '@mui/material';
-// import { items } from './navBarItems';
-
-// const NavBar = () => {
-//   return (
-//     <Box display="flex" justifyContent="center" gap="6px">
-//       {items.map((item) => {
-//         const Icon = item.icon;
-
-//         return (
-//           <Box key={item.id} display="flex" alignItems="center" gap={1.5}>
-//             <Icon width={20} height={20} style={{ color: '#3B82F6' }} />
-//             <Typography>{item.title}</Typography>
-//           </Box>
-//         );
-//       })}
-//     </Box>
-//   );
-// };
-
-// export default NavBar;
-
 'use client';
 import { useRef, useState } from 'react';
 import { Box, Typography, IconButton } from '@mui/material';
@@ -47,11 +25,10 @@ const NavBar = () => {
         background: '#0B0F1A',
         padding: '8px',
         borderRadius: '999px',
-        maxWidth: '1140px',
+        maxWidth: '1520px',
         marginLeft: '80px',
       }}
     >
-      {/* Pills */}
       <Box
         ref={scrollRef}
         display="flex"
@@ -97,7 +74,6 @@ const NavBar = () => {
       </Box>
 
       <Box gap="5px" display="flex">
-        {/* Pagination arrows */}
         <IconButton
           onClick={() => scroll('left')}
           sx={{
