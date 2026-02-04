@@ -26,7 +26,7 @@ const NavBar = () => {
         padding: '8px',
         borderRadius: '999px',
         maxWidth: '1520px',
-        marginLeft: '80px',
+        margin: '0 26px 0 16px',
       }}
     >
       <Box

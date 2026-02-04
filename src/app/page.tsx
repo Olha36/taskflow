@@ -8,6 +8,7 @@ export default function Home() {
       <Header name="Arthur" tasksAmount={12} />
       <NavBar />
       <Main />
+  
     </div>
   );
 }

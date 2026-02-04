@@ -51,7 +51,7 @@ const Header = ({ name, tasksAmount }: HeaderProps) => {
   };
 
   return (
-    <Box className="flex items-center justify-around w-full px-4 py-2">
+    <Box className="flex items-center justify-between ml-[12px] w-full px-4 py-2">
       <Typography variant="h5">
         Hi {name}, welcome! You have {tasksAmount} open tasks.
       </Typography>

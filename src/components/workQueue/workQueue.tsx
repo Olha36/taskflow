@@ -27,8 +27,8 @@ const WorkQueue = ({ assigned, review, referral }: WorkQueueProps) => {
   const [active, setActive] = useState<Filter>('assigned');
 
   return (
-    <div className="ml-[83px] max-w-[950px] rounded-xl border border-[#313B54] bg-[#1E2233] p-[25px]">
-      <Typography className="mb-4 text-xl font-semibold text-white">Work Queue</Typography>
+    <div className="w-full rounded-xl border border-[#313B54] bg-[#1E2233] p-[25px] max-w-[790px] ">
+      <Typography className="text-xl font-semibold text-white" sx={{marginBottom: '20px'}}>Work Queue</Typography>
 
       <Box display="flex" gap={1} mb={4}>
         {filters.map(({ key, label, count }) => (
@@ -47,8 +47,11 @@ const WorkQueue = ({ assigned, review, referral }: WorkQueueProps) => {
       </Box>
 
       <div className="overflow-x-auto">
-        <div className="min-w-[880px] rounded-xl border border-[#313B54] bg-[#1E2233]">
-          <div className="grid grid-cols-[170px_210px_150px_160px_110px_40px] bg-white/5 px-4 py-3 text-sm text-gray-400">
+        <div className="max-w-full rounded-xl border-0 bg-[#1E2233]">
+          <div
+            className="grid grid-cols-[140px_1.4fr_1fr_130px_90px_40px]
+ bg-white/5 px-4 py-3 text-sm text-gray-400"
+          >
             <div>ORIGINATOR</div>
             <div>CLIENT / LINE</div>
             <div>TYPE</div>
@@ -65,7 +68,8 @@ const WorkQueue = ({ assigned, review, referral }: WorkQueueProps) => {
                 <div
                   key={item.id}
                   className="
-                    grid grid-cols-[170px_210px_150px_160px_110px_40px]
+                    grid grid-cols-[140px_1.4fr_1fr_130px_90px_40px]
+
                     items-start
                     px-4 py-4
                     border-t border-white/5
@@ -81,7 +85,9 @@ const WorkQueue = ({ assigned, review, referral }: WorkQueueProps) => {
                   </div>
 
                   <div>
-                    <div className="font-medium text-white text-[12px]">{item.client}</div>
+                    <div className="font-medium text-white text-[12px] leading-tight">
+                      {item.client}
+                    </div>
                     <div className="text-sm text-gray-400 text-[12px]">{item.line}</div>
                   </div>
 
